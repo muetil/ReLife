@@ -25,21 +25,24 @@ export default {
 <style scoped>
 #titleBar{
   width: 100%;
-  height: 48px;
+  height: 80px;
+  background-color: gray;
 }
 #titleBar_content{
   height: 100%;
-  width: 1080px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
+  padding-left: 36px;
 }
 
 #titleBar_title{
-  height: 42px;
-  line-height: 42px;
-  font-size: 22px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 26px;
   font-weight: bolder;
   color: white;
   margin: 0;

@@ -1,30 +1,58 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="appContent">
+    <div id="mainContent">
+      <div id="left">
+        <side-item-list/>
+      </div>
+      <div id="right">
+        <router-view/>
+      </div>
+    </div>
   </div>
-  <router-view/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+  font-size: 20px;
+}
+#appContent{
+  position: relative;
+  top:0;
+  left: 0;
+  height: 100vh;
 }
 
-#nav {
-  padding: 30px;
+#mainContent{
+  margin: 0 auto;
+  height: 100%;
+  width: 1200px;
+  box-sizing: border-box;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#left{
+  height: 100%;
+  width: 96px;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 66px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#right{
+  display: flex;
+  height: 100%;
+  width: 1100px;
+  float: left;
+  border-radius: 16px;
+  box-sizing: border-box;
+  border: 1px solid #dedcdc;
+  overflow: hidden;
 }
 </style>
+<script>
+import TitleBar from "@/components/common/TitleBar/TitleBar";
+import SideItemList from "@/components/common/SideItemList/SideItemList";
+import ReMaker from "@/components/content/ReMaker/ReMaker";
+export default {
+  components: {ReMaker, SideItemList, TitleBar}
+}
+
+document.title='实验项目安放处'
+</script>
